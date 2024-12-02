@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+:root {
+  --main-color: #222831;
+  --text-color: #1e1c2a;
+  --bg-color: rgb(243, 242, 242);
+
+  --big-font: 4rem;
+  --h2-font: 2.2rem;
+  --p-font: 0.9rem;
+}
+
+section {
+  padding: 50px 10%; /* px de olabilir şimdilik % kalsın */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.active {
+  --text-color: #fff;
+  --bg-color: #222124;
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-color);
+  padding: 18px 100px;
+  box-shadow: 0 0.5rem 50rem rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Bisa juga diubah ke 'space-between' jika perlu */
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Agar elemen child bisa diatur lebih fleksibel */
+  overflow: hidden; /* Pastikan elemen tidak melewati batas */
+}
+
+.home-text {
+  flex: 1;
+  padding: 0 5%;
+  z-index: 2; 
+  flex: 1;
+  padding: 0 5%;
+  color: var(--highlight-color);
+}
+
+.home-text h1 {
+  font-size: var(--big-font);
+  color: var(--main-color);
+}
+
+.home-text p {
+  margin: 1.5rem 0;
+  font-size: var(--p-font);
+  line-height: 1.6;
+}
+
+.home-img {
+  position: absolute; /* Supaya gambar memenuhi area home */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Letakkan gambar di bawah teks */
+}
+
+.home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heading-home {
+  text-align: center;
+  padding: 2rem; /* Memberikan ruang di sekitar konten */
+}
+
+.heading-home p {
+  max-width: 100%;
+  line-height: 1.8;
+  margin: 1rem auto; /* Memberikan jarak di atas dan bawah tulisan */
+  padding: 1rem 0; /* Memberikan ruang di dalam tulisan */
+  font-size: 25px;
+}
+
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-img img {
+  max-width: 60%;
+  border-radius: 10px;
+}
+
+.about-text span {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.about-text h2 {
+  font-size: var(--h2-font);
+}
+
+.about-text p {
+  margin: 10px 0 25px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading p {
+  max-width: 720px;
+  line-height: 1.8; 
+  text-align: left; 
+  margin: 0 auto;
+  padding: 1rem 0; 
+  font-size: 35px;
+  font-style: italic;
+}
+
+.heading h3  {
+  color: #1e1c2a;
+  font-size: medium;
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: #fff;
+}
+
+.contact-text span {
+  color: #fff;
+  font-weight: 500;
+}
+
+.contact-text h2 {
+  font-size: #fff;
+}
+
+.contact-box h3 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.social {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.social i {
+  font-size: 20px;
+  margin-right: 1rem;
+  color: #fff;
+}
+.social i:hover {
+  color: #EEEEEE;
+}
+.contact-box li a {
+  color: #fff;
+}
+.contact-box li a:hover {
+  color: #fff;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+}
+.address i {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.address span {
+  margin-left: 1rem;
+}
+
+.copyright {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 921px) {
+  header {
+    padding: 14px 41px;
+  }
+
+  :root {
+    --big-font: 3rem;
+    --h2-font: 1.7rem;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 50px 8%;
+  }
+  #menu-icon {
+    display: initial;
+    color: var(--text-color);
+  }
+  header .navbar {
+    position: absolute;
+    top: -400px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--bg-color);
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    transition: 0.2s ease;
+  }
+  .navbar.active {
+    top: 100%;
+  }
+  .navbar a {
+    padding: 1.5rem;
+    display: block;
+    background: var(--bg-color);
+  }
+}
+@media (max-width: 715px) {
+  header {
+    padding: 10px 16px;
+  }
+  .home {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+@media (max-width: 515px) {
+  .contact {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+  }
+  .contact .btn {
+    margin-top: 1 rem;
+  }
+}
+@media (max-width: 450px) {
+  :root {
+    --big-font: 2rem;
+    --h2-font: 1.4rem;
+  }
+  .home-text {
+    padding-top: 4rem;
+  }
+}
